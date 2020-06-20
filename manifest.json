@@ -1,0 +1,17 @@
+{
+"manifest_version": 1.0,
+    "name": "Chinglish",
+    "description": "Convert some words to English",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "replace.js"
+            ],
+            "run_at": "document_en"
+        }
+    ]
+}
