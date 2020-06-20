@@ -1,0 +1,24 @@
+tagger.js contains functions to walk through the document and wrap words that we will target for translation within a span element
+    Each span element has a identifier unique to the English/Chinese translation pair
+    Input: document.body, English targets
+    Output: updated HTML
+
+createCSS.js takes advantage of CSS :hover to change the content within the elements tagger.js created
+    By default, the content is Chinese
+    On hover, the content is the origianl English
+    Input: A dictionary (or arrays) of targets/translations
+    Output: CSS string
+
+getTargets.js specifies which English words to target for translation
+    Input: document
+    Output: list of English words
+    Account for articles and meaningless words
+    Account for passive voice, proper nouns, phrases
+    Based on word frequency? 
+
+translate.js translates the targets to Chinese
+    Input: output of getTargets.js, a list of English words
+    Output: list of Chinese words, maybe a dictionary
+    API (?) or dictionary-based translation?
+
+chinglish.js injects the css stylesheet from createCSS.js
